@@ -1,0 +1,21 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.paginacion{
+    padding: v.$separacion 0;
+    @include m.telefono{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    button{
+        margin: 0 0 1rem 0;
+    }
+}
+
+.ocultar{
+    //Mantiene El Elemento En Su Lugar Pero No Lo Muestra, Esto Para Que Los Botones No Se Muevan
+    //Cuando Se Quita O Se Agrega Uno
+    visibility: hidden;  //No Usamos Display None Ya Que Nos Haríá Desaparecer El Elemento Y El Botón Se Movería
+    
+}

@@ -1,0 +1,29 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.formulario{
+    margin-top: v.$separacion;
+    width: 100%;
+}
+
+.campo{
+    display: flex;
+    margin-bottom: 2rem;
+    align-items: center; //Centrar Horizontalmente
+    label{
+        flex: 0 0 10rem; //Ancho Fijo (0 Factor Crecimiento, 0 Shrink, 10 Base)
+    }
+
+    input{
+        flex: 1;
+        border: none;
+        padding: calc(v.$separacion / 4); //La variable $separacion = 5 rem, los cuales dividimos entre 4
+        border-radius: 1rem;
+
+        &:disabled{
+            background-color: lighten(v.$negro, 30%);
+            color: v.$blanco;
+            cursor: not-allowed;
+        }
+    }
+}
